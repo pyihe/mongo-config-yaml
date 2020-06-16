@@ -10,13 +10,13 @@ systemLog: #日志设置
    logAppend: true  #日志以追加的形式记录
 processManagement: #进程管理
    fork: false  #是否开启daemon模式
-   pidFilePath: "/usr/local/mongodb-4.2.1/mongod.pid" #pid文件存放位置
+   pidFilePath: "/var/run/mongod.pid" #pid文件存放位置，注意目录权限
 net:
    bindIp: 127.0.0.1 #默认localhost，如果需要添加多个，使用,分割，支持IPV6，需要设置ipv6为true
    port: 27017 
    maxIncomingConnections: 20 #接受的最大连接数
 storage: #存储设置
-   dbPath: "/usr/local/mongodb-4.2.1/db" #db存放位置
+   dbPath: "/usr/local/mongodb/db" #db存放位置
    journal:   #journal设置
       enabled: true
    engine: wiredTiger #存储引擎设置，默认wiredTiger
